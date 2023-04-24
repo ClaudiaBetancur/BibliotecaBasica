@@ -29,4 +29,9 @@ public class UsuarioContoller {
         usuarioService.deleteUser(id);
     }
 
+    @PutMapping("/persona")
+    private void editarPersona(@RequestBody Usuario usuario) {
+        usuarioService.updateUser(usuario.getId());
+    }
+
 }

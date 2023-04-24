@@ -28,4 +28,9 @@ public class LibroController {
     private void deleteBook(@PathVariable ("id") Integer id) {
         libroService.deleteBook(id);
     }
+
+    @PutMapping("/libro")
+    private void updateBook(@RequestBody Libro libro){
+        libroService.updateBook(libro.getId());
+    }
 }

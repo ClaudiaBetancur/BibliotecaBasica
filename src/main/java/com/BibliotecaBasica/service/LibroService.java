@@ -24,13 +24,11 @@ public class LibroService {
         return libros;
     }
 
-    public void updateBook() {
-
+    public void updateBook(Integer id){
+        libroRepository.deleteById(id);
     }
 
     public void deleteBook(Integer id){
         libroRepository.deleteById(id);
-
-
     }
 }

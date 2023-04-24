@@ -24,8 +24,8 @@ public class UsuarioService {
         return usuarios;
     }
 
-    public void updateUser() {
-
+    public void updateUser(Integer id){
+        usuarioRepository.deleteById(id);
     }
 
     public void deleteUser(Integer id){
